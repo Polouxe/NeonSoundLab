@@ -117,6 +117,53 @@
     overflow: hidden;
   }
 
+  .hero-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+  }
+
+  .hero-left {}
+
+  .hero-right {
+    display: flex;
+    align-items: center;
+  }
+
+  .label-desc {
+    padding: 30px 36px;
+    border: 1px solid rgba(0,255,255,0.15);
+    background: rgba(0,255,255,0.03);
+    position: relative;
+  }
+
+  .label-desc::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--neon-cyan), transparent);
+  }
+
+  .label-desc-text {
+    font-size: 0.82rem;
+    line-height: 2;
+    color: rgba(220,220,255,0.75);
+    margin-bottom: 16px;
+  }
+
+  .label-desc-text:last-child { margin-bottom: 0; }
+
+  .label-desc-text strong {
+    color: var(--neon-cyan);
+    font-size: 0.85rem;
+  }
+
+  @media (max-width: 768px) {
+    .hero-inner { grid-template-columns: 1fr; }
+  }
+
   .orb {
     position: absolute;
     border-radius: 50%;
@@ -701,13 +748,27 @@
   <div class="orb orb-1"></div>
   <div class="orb orb-2"></div>
 
-  <div class="section-tag fade-up">Roster</div>
-  <h1 class="fade-up delay-1">
-    LES<br><span>ARCHITECTES</span><br>SONORES
-  </h1>
-  <p class="fade-up delay-2">
-    Chaque artiste du Lab est un univers. Une esthétique.<br>Une fréquence à part entière.
-  </p>
+  <div class="hero-inner">
+    <div class="hero-left fade-up">
+      <div class="section-tag">Roster</div>
+      <h1 class="fade-up delay-1">
+        LES<br><span>ARCHITECTES</span><br>SONORES
+      </h1>
+      <p class="fade-up delay-2">
+        Chaque artiste du Lab est un univers. Une esthétique.<br>Une fréquence à part entière.
+      </p>
+    </div>
+    <div class="hero-right fade-up delay-2">
+      <div class="label-desc">
+        <p class="label-desc-text">
+          <strong>NEON SOUND LAB™</strong> est un label de musique indépendant spécialisé dans les musiques électroniques à forte identité. Né d'une passion pour la French Touch et l'énergie des dancefloors, le label se positionne comme un pont entre héritage électronique et innovation.
+        </p>
+        <p class="label-desc-text">
+          Nous nous engageons à offrir une plateforme d'expression aux artistes audacieux, en mettant l'accent sur une esthétique visuelle cohérente et une diffusion de haute qualité. La musique est notre moteur, le futur notre horizon.
+        </p>
+      </div>
+    </div>
+  </div>
 </section>
 
 <!-- TICKER -->
@@ -715,7 +776,7 @@
   <div class="ticker-track">
     <span class="ticker-item"><span class="ticker-dot"></span>FRENCH TOUCH</span>
     <span class="ticker-item"><span class="ticker-dot"></span>SPACE BAROQUE</span>
-    <span class="ticker-item"><span class="ticker-dot"></span>ANALOG ETHER</span>
+    <span class="ticker-item"><span class="ticker-dot"></span>ANALOG POLOUXE</span>
     <span class="ticker-item"><span class="ticker-dot"></span>BRASS-CORE</span>
     <span class="ticker-item"><span class="ticker-dot"></span>DUSTY TECH</span>
     <span class="ticker-item"><span class="ticker-dot"></span>TECHNO HYPNOTIQUE</span>
@@ -761,7 +822,7 @@
       <p class="artist-desc">
         Mr_Pp est un producteur français qui explore la friction entre lumière et ombre. Son son voyage des grooves lumineux de la French Touch aux profondeurs sombres et industrielles du downtempo européen. Fortement influencé par la précision des machines et les atmosphères cinématographiques, il façonne un paysage sonore où des vocoders scintillants rencontrent des basses lourdes et brutes. Que ce soit du disco-funk haute énergie ou des beats underground viscéraux, Mr_Pp explore l'espace où l'instinct humain rencontre la texture électronique. Aucune frontière, seulement le pulse.
       </p>
-      <a href="#contact" class="btn btn-cyan">Écouter les démos</a>
+      <a href="https://open.spotify.com/intl-fr/artist/0mDQtDocCgf36a5dQ9eKzp?si=wY7ZQ6jbShmLew5zOALu8A" target="_blank" class="btn btn-cyan">Écouter sur Spotify</a>
     </div>
   </div>
 
@@ -783,7 +844,7 @@
         <span class="tag">Cinématique</span>
       </div>
       <p class="artist-desc">
-        HOZYL est l'écho d'une technologie oubliée. Né de la collision entre la poésie d'une voile qui bat au vent (Ho — 帆) et la froideur d'un alliage métallique (Zyl), ce projet sonore explore la <em>« Nostalgie du Futur »</em>. C'est le son d'un galion spatial qui traverse une nébuleuse de poussière, où le craquement du bois se mêle au sifflement des circuits intégrés.
+        HOZYL sculpte une musique hybride où la mélancolie du Hip-Hop jazzy/Soul rencontre l'épure de l'électronique. Fusionnant la poésie organique du Hip-Hop lo-fi et la précision de l'électronique moderne, HOZYL explore la « Nostalgie du Futur ». Inspiré par l'héritage mélodique du Japon, le projet navigue entre beats texturés et paysages sonores synthétiques.
       </p>
       <div class="sound-signature">
         <div class="sound-signature-title">// Signature Sonore</div>
@@ -802,7 +863,7 @@
           </div>
         </div>
       </div>
-      <a href="#contact" class="btn btn-pink">Découvrir HOZYL</a>
+      <a href="#" class="btn btn-pink">Écouter sur Spotify</a>
     </div>
   </div>
 
@@ -835,7 +896,7 @@
       <div class="card-title">// Ce que nous offrons</div>
       <ul class="recruit-list">
         <li><span class="list-icon">🌐</span><div><strong>Distribution Mondiale</strong>Spotify, Apple Music, Deezer et toutes les plateformes majeures.</div></li>
-        <li><span class="list-icon">🎨</span><div><strong>Identité Visuelle</strong>Accès aux outils IA next-gen (Sora & suivants) pour vos artworks.</div></li>
+        <li><span class="list-icon">🎨</span><div><strong>Identité Visuelle</strong>Accès aux codes et au design du Label pour vos artworks et votre com. (Canvas/Reels/Shorts...)</div></li>
         <li><span class="list-icon">📈</span><div><strong>Promotion Stratégique</strong>Splits automatisés et accompagnement pour maximiser vos revenus.</div></li>
       </ul>
     </div>
